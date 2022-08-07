@@ -1,0 +1,301 @@
+EESchema Schematic File Version 4
+LIBS:four way switch-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Screw_Terminal_01x05 J2
+U 1 1 5FF861A6
+P 1450 2550
+F 0 "J2" H 1368 2125 50  0000 C CNN
+F 1 "Screw_Terminal_01x05" H 1368 2216 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-5_P5.08mm" H 1450 2550 50  0001 C CNN
+F 3 "~" H 1450 2550 50  0001 C CNN
+	1    1450 2550
+	-1   0    0    1   
+$EndComp
+Text GLabel 1900 2550 2    50   Input ~ 0
+SWITCH-A
+Text GLabel 1900 2450 2    50   Input ~ 0
+SWITCH-B
+Text GLabel 1900 2350 2    50   Input ~ 0
+SWITCH-C
+Text GLabel 1900 2650 2    50   Input ~ 0
+SWITCH-D
+$Comp
+L power:Earth #PWR01
+U 1 1 5FF885F8
+P 1800 2900
+F 0 "#PWR01" H 1800 2650 50  0001 C CNN
+F 1 "Earth" H 1800 2750 50  0001 C CNN
+F 2 "" H 1800 2900 50  0001 C CNN
+F 3 "~" H 1800 2900 50  0001 C CNN
+	1    1800 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 2350 1900 2350
+Wire Wire Line
+	1650 2450 1900 2450
+Wire Wire Line
+	1650 2550 1900 2550
+Wire Wire Line
+	1650 2650 1900 2650
+Wire Wire Line
+	1650 2750 1800 2750
+Wire Wire Line
+	1800 2750 1800 2900
+$Comp
+L power:Earth #PWR03
+U 1 1 5FF88DEC
+P 5100 4500
+F 0 "#PWR03" H 5100 4250 50  0001 C CNN
+F 1 "Earth" H 5100 4350 50  0001 C CNN
+F 2 "" H 5100 4500 50  0001 C CNN
+F 3 "~" H 5100 4500 50  0001 C CNN
+	1    5100 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 4500 5100 4350
+$Comp
+L Connector:Screw_Terminal_01x03 J1
+U 1 1 5FF946B7
+P 1450 1600
+F 0 "J1" H 1368 1275 50  0000 C CNN
+F 1 "Screw_Terminal_01x03" H 1368 1366 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-3_P5.08mm" H 1450 1600 50  0001 C CNN
+F 3 "~" H 1450 1600 50  0001 C CNN
+	1    1450 1600
+	-1   0    0    1   
+$EndComp
+Text GLabel 1900 1600 2    50   Input ~ 0
+LINE
+Wire Wire Line
+	1650 1500 1900 1500
+Wire Wire Line
+	1650 1600 1900 1600
+Wire Wire Line
+	1650 1700 1900 1700
+$Comp
+L Regulator_Switching:AC_80-230V--DC_5V-700mA U1
+U 1 1 5FF93972
+P 4550 1400
+F 0 "U1" H 4575 1815 50  0000 C CNN
+F 1 "AC_80-230V--DC_5V-700mA" H 4575 1724 50  0000 C CNN
+F 2 "Custom:AC_80-230V--DC_5V-700mA" H 4550 1450 50  0001 C CNN
+F 3 "" H 4550 1450 50  0001 C CNN
+	1    4550 1400
+	1    0    0    -1  
+$EndComp
+Text GLabel 3700 1250 0    50   Input ~ 0
+LINE
+Text GLabel 3700 1600 0    50   Input ~ 0
+NEUTRAL
+Wire Wire Line
+	3700 1250 3850 1250
+Wire Wire Line
+	3700 1600 3850 1600
+$Comp
+L power:+5V #PWR04
+U 1 1 5FF94A6A
+P 5450 1150
+F 0 "#PWR04" H 5450 1000 50  0001 C CNN
+F 1 "+5V" H 5465 1323 50  0000 C CNN
+F 2 "" H 5450 1150 50  0001 C CNN
+F 3 "" H 5450 1150 50  0001 C CNN
+	1    5450 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR05
+U 1 1 5FF950AA
+P 5450 1700
+F 0 "#PWR05" H 5450 1450 50  0001 C CNN
+F 1 "Earth" H 5450 1550 50  0001 C CNN
+F 2 "" H 5450 1700 50  0001 C CNN
+F 3 "~" H 5450 1700 50  0001 C CNN
+	1    5450 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 1250 5450 1250
+Wire Wire Line
+	5450 1250 5450 1150
+Wire Wire Line
+	5300 1600 5450 1600
+Wire Wire Line
+	5450 1600 5450 1700
+$Comp
+L Device:CP_Small C1
+U 1 1 5FF9661F
+P 5550 1400
+F 0 "C1" H 5600 1450 50  0000 L CNN
+F 1 "CP_Small" H 5600 1300 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 5550 1400 50  0001 C CNN
+F 3 "~" H 5550 1400 50  0001 C CNN
+	1    5550 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5FF96D4F
+P 6050 1400
+F 0 "C2" H 6142 1446 50  0000 L CNN
+F 1 "C_Small" H 6100 1300 50  0000 L CNN
+F 2 "Capacitor_THT:C_Radial_D6.3mm_H5.0mm_P2.50mm" H 6050 1400 50  0001 C CNN
+F 3 "~" H 6050 1400 50  0001 C CNN
+	1    6050 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 1250 5550 1250
+Connection ~ 5450 1250
+Wire Wire Line
+	5450 1600 5550 1600
+Connection ~ 5450 1600
+Wire Wire Line
+	5550 1500 5550 1600
+Connection ~ 5550 1600
+Wire Wire Line
+	5550 1600 6050 1600
+Wire Wire Line
+	5550 1300 5550 1250
+Connection ~ 5550 1250
+Wire Wire Line
+	5550 1250 6050 1250
+Wire Wire Line
+	6050 1300 6050 1250
+Wire Wire Line
+	6050 1500 6050 1600
+$Comp
+L power:+5V #PWR02
+U 1 1 5FF98BDE
+P 5100 3050
+F 0 "#PWR02" H 5100 2900 50  0001 C CNN
+F 1 "+5V" H 5115 3223 50  0000 C CNN
+F 2 "" H 5100 3050 50  0001 C CNN
+F 3 "" H 5100 3050 50  0001 C CNN
+	1    5100 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 3150 5100 3050
+Text GLabel 6000 3450 2    50   Input ~ 0
+SWITCH-A
+Text GLabel 6000 3550 2    50   Input ~ 0
+SWITCH-B
+Text GLabel 6000 3650 2    50   Input ~ 0
+SWITCH-C
+Text GLabel 6000 3750 2    50   Input ~ 0
+SWITCH-D
+Wire Wire Line
+	5700 3450 6000 3450
+Wire Wire Line
+	5700 3550 6000 3550
+Wire Wire Line
+	5700 3650 6000 3650
+Wire Wire Line
+	5700 3750 6000 3750
+$Comp
+L Transistor_BJT:2N3904 Q1
+U 1 1 5FF9B1EE
+P 6700 3850
+F 0 "Q1" H 6890 3896 50  0000 L CNN
+F 1 "2N3904" H 6890 3805 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 6900 3775 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 6700 3850 50  0001 L CNN
+	1    6700 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR07
+U 1 1 5FF9C1AF
+P 6800 4250
+F 0 "#PWR07" H 6800 4000 50  0001 C CNN
+F 1 "Earth" H 6800 4100 50  0001 C CNN
+F 2 "" H 6800 4250 50  0001 C CNN
+F 3 "~" H 6800 4250 50  0001 C CNN
+	1    6800 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 4050 6800 4250
+$Comp
+L Relay:G5LE-1 K1
+U 1 1 5FF9CF2F
+P 7000 3050
+F 0 "K1" H 7430 3096 50  0000 L CNN
+F 1 "G5LE-1" H 7430 3005 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPDT_Omron-G5LE-1" H 7450 3000 50  0001 L CNN
+F 3 "http://www.omron.com/ecb/products/pdf/en-g5le.pdf" H 7000 2650 50  0001 C CNN
+	1    7000 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR06
+U 1 1 5FFA0E26
+P 6800 2550
+F 0 "#PWR06" H 6800 2400 50  0001 C CNN
+F 1 "+5V" H 6815 2723 50  0000 C CNN
+F 2 "" H 6800 2550 50  0001 C CNN
+F 3 "" H 6800 2550 50  0001 C CNN
+	1    6800 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 2750 6800 2550
+Text GLabel 7300 2350 1    50   Input ~ 0
+LINE
+Text GLabel 7750 3550 2    50   Input ~ 0
+OUTPUT
+Wire Wire Line
+	7300 2350 7300 2750
+Wire Wire Line
+	7200 3350 7200 3550
+Wire Wire Line
+	7200 3550 7750 3550
+Wire Wire Line
+	6800 3350 6800 3650
+$Comp
+L MCU_Microchip_ATtiny:ATtiny13A-PU U2
+U 1 1 5FF95318
+P 5100 3750
+F 0 "U2" H 4571 3796 50  0000 R CNN
+F 1 "ATtiny13A-PU" H 4571 3705 50  0000 R CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 5100 3750 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc8126.pdf" H 5100 3750 50  0001 C CNN
+	1    5100 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5FF9630B
+P 6150 3850
+F 0 "R1" V 6150 3850 50  0000 C CNN
+F 1 "R" V 6250 3800 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 6080 3850 50  0001 C CNN
+F 3 "~" H 6150 3850 50  0001 C CNN
+	1    6150 3850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5700 3850 6000 3850
+Wire Wire Line
+	6300 3850 6500 3850
+Text GLabel 1900 1700 2    50   Input ~ 0
+OUTPUT
+Text GLabel 1900 1500 2    50   Input ~ 0
+NEUTRAL
+$EndSCHEMATC
